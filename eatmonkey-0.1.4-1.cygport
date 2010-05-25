@@ -1,0 +1,6 @@
+inherit xfce4
+
+DESCRIPTION="GUI download manager based on aria2"
+HOMEPAGE="http://goodies.xfce.org/projects/applications/eatmonkey"
+
+DISTCLEANFILES="src/eatmonkey"
