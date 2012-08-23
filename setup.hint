@@ -1,6 +1,0 @@
-category: Net Xfce
-requires: aria2 ruby ruby-glib2 ruby-gtk2 ruby-pango
-sdesc: "GUI download manager based on aria2"
-ldesc: "Eatmonkey is a download manager that works exclusively with 
-aria2, the ultra fast download utility. It has support for HTTP(s)/FTP, 
-BitTorrent and Metalink files."
