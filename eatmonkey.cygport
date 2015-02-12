@@ -2,7 +2,7 @@ inherit xfce4
 
 NAME="eatmonkey"
 VERSION=0.1.4
-RELEASE=2
+RELEASE=3
 CATEGORY="Net Xfce"
 SUMMARY="GUI download manager based on aria2"
 DESCRIPTION="Eatmonkey is a download manager that works exclusively with aria2,
@@ -10,7 +10,12 @@ the ultra fast download utility. It has support for HTTP(s)/FTP, BitTorrent
 and Metalink files."
 HOMEPAGE="http://goodies.xfce.org/projects/applications/eatmonkey"
 
-PATCH_URI="01-ruby192.patch"
+PATCH_URI="
+	01-ruby192.patch
+	02-aria2-118.patch
+"
+
+ARCH=noarch
 
 DISTCLEANFILES="src/eatmonkey"
 

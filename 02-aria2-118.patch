@@ -1,0 +1,30 @@
+--- origsrc/eatmonkey-0.1.4/src/eataria2.rb	2010-02-28 09:27:27.000000000 -0600
++++ src/eatmonkey-0.1.4/src/eataria2.rb	2015-02-12 13:35:31.236399600 -0600
+@@ -137,7 +137,7 @@ class Eat::Aria2 < GLib::Object
+ 				# Launch aria2c process
+ 				begin
+ 					command = "aria2c --disable-ipv6=true " \
+-						"--enable-xml-rpc --xml-rpc-listen-port=#{@port} " \
++						"--enable-rpc --rpc-listen-port=#{@port} " \
+ 						"--conf-path=#{@confdir}/aria2.conf --log=#{@confdir}/aria2.log --log-level=notice " \
+ 						"--dht-file-path=#{@confdir}/dht.dat"
+ 					@@pid = spawn_server(command)
+@@ -594,12 +594,12 @@ class Eat::Aria2Config
+ 		@values["metalink-enable-unique-protocol"] = true # use only one type of protocol for download
+ 
+ 		# XML-RPC options
+-		@values["enable-xml-rpc"] = false
+-		@values["xml-rpc-listen-all"] = false
+-		@values["xml-rpc-listen-port"] = 6800
+-		@values["xml-rpc-max-request-size"] = "2M"
+-		@values["xml-rpc-passwd"] = ""
+-		@values["xml-rpc-user"] = ""
++		@values["enable-rpc"] = false
++		@values["rpc-listen-all"] = false
++		@values["rpc-listen-port"] = 6800
++		@values["rpc-max-request-size"] = "2M"
++		@values["rpc-passwd"] = ""
++		@values["rpc-user"] = ""
+ 
+ 		# Advanced options
+ 		@values["allow-overwrite"] = false # re-download the file even if file exists
